@@ -1,0 +1,8 @@
+%html
+  %head
+    %title= GenerationRandom
+    =stylesheet_link_tag    "generation_random", :media => "all"
+    =javascript_include_tag "generation_random"
+    =csrf_meta_tags
+  %body
+    =yield
