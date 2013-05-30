@@ -1,3 +1,14 @@
-%h2 Give us some numbers! :D
-=form_for :@number, remote: true, url: {action: 'add_number'} do |form|
-  =form.text_field "number"
+.left
+  %h2 Give us some numbers! :D
+  =form_for :number, remote: true, url: {action: 'add_number'}, html: {class: 'number'} do |form|
+    =form.text_field   "number"
+    <br>
+    <br>
+    %h2 Decimal Places
+    .decimals
+      %label 1
+      =form.radio_button "decimal", 1
+      %label 2
+      =form.radio_button "decimal", 2, checked: true
+.right
+  =render partial: 'recent_numbers'

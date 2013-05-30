@@ -4,5 +4,7 @@ class RandomController < ApplicationController
   end
 
   def add_number
+    @number = RandomNum.create(params[:number])
+    @numbers = RandomNum.all
   end
 end
