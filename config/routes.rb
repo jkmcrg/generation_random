@@ -1,5 +1,6 @@
 GenerationRandom::Application.routes.draw do
 
+  match ':controller(/:action(/:id))'
   root :to => "random#index"
 
   # The priority is based upon order of creation:

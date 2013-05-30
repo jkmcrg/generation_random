@@ -1,1 +1,3 @@
-%h2 Hello! :D
+%h2 Give us some numbers! :D
+=form_for :@number, remote: true, url: {action: 'add_number'} do |form|
+  =form.text_field "number"
