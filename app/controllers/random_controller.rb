@@ -1,10 +1,10 @@
 class RandomController < ApplicationController
   def index
-    @numbers = RandomNum.all
+    @numbers = RandomNum.order('created_at DESC').all
   end
 
   def add_number
-    @number = RandomNum.create(params[:number])
-    @numbers = RandomNum.all
+    @number = RandomNum.create(number: params[:number][:number])
+    @numbers = RandomNum.order('created_at DESC').all
   end
 end

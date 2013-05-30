@@ -1,1 +1,1 @@
-alert('thanks');
+$('.right').html("<%= escape_javascript(render(partial: 'recent_numbers', locals: {numbers: @numbers})) %>");
