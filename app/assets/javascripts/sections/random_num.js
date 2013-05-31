@@ -1,4 +1,9 @@
 $(function () {
+  $('input#number_number').keypress(function (e) {
+    if (e.which == 13) {
+      e.preventDefault();
+    }
+  });
   $('input#number_number').keyup(function () {
     var nums = $(this).val().toString().replace(/\D/g,'');
     $(this).val(nums);
