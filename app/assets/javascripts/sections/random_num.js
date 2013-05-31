@@ -1,8 +1,9 @@
 $(function () {
   $('input#number_number').keyup(function () {
+    var nums = $(this).val().toString().replace(/\D/g,'');
+    $(this).val(nums);
     var decimals = $('.decimals input[type=radio]:checked').val()
     if ($(this).val().length >= decimals) {
-      var nums = $(this).val().toString();
       n = Math.floor(nums.length/decimals);
       for(i = 0; i < n; i++) {
         var number = nums.substring(0, decimals);
